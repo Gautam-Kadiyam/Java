@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class Employee{
+        public string name;
+        public int salary;
+        public int joiningDate;
+        public Employee()
+        {
+
+        }
+        public Employee(string name, int salary, int joiningDate){
+            this.name = name;
+            this.salary = salary;
+            this.joiningDate = joiningDate;
+        }
+        public void GetEmployeeData(){
+            {
+                System.out.println("Enter the name of employee: ");
+                Scanner name =new Scanner(System.in);
+                System.out.println("Enter the salary of employee: ");
+                Scanner salary=new Scanner(System.in);
+                System.out.println("Enter the date of joining of employee: ");
+                Scanner joiningDate=new Scanner(System.in);
+            }
+        }
+        public void DisplayEmployee(){
+            System.out.println("The name of employee is: "+ name);
+            System.out.println("The salary of employee is: "+salary);
+            System.out.println("The date of joining of employee is: "+joiningDate);
+        }
+}
+    class Program{
+        static void Main(string[] args){
+            Employee[] e = new Employee[10];
+            for(int i = 0; i < 10; i++){
+                System.out.println("Enter the data of employee with id: {i} *****************************************");
+                e[i] = new Employee();
+                e[i].GetEmployeeData();
+            }
+            System.out.println("***********The data of given employees is: ");
+            for(int i = 0; i < 10; i++){
+                e[i].DisplayEmployee();
+            }
+        }
+    }
